@@ -1,4 +1,5 @@
-import "./style.css"; 
-import { greeting } from "./util/helper.js"; 
+import { mountHandlers } from "./form/handler";
 
-console.log(greeting); 
+import "./style.css";
+
+mountHandlers();
