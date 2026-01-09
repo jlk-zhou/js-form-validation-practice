@@ -1,0 +1,44 @@
+body {
+  box-sizing: border-box; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+}
+
+form {
+  border: 1px solid #333333;
+  width: 600px; 
+  height: 400px; 
+  position: relative; 
+  top: -100px; 
+  padding: 30px; 
+}
+
+input {
+  appearance: none; 
+  border: 1px solid #333333; 
+  margin: 0; 
+
+  font-family: inherit; 
+  font-size: 90%; 
+}
+
+input:invalid {
+  border-color: #990000; 
+  background-color: #ffdddd;
+}
+
+input:focus:invalid {
+  outline: none; 
+}
+
+.email-error {
+  padding: 0; 
+  color: #990000; 
+  font-size: 80%; 
+}
+
+.email-error.active {
+  padding: 0.3em; 
+}
