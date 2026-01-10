@@ -23,4 +23,19 @@ function mountHandlers() {
   emailInput.addEventListener("input", checkEmailInput);
 }
 
-export { mountInputFocusHandler };
+function submitHandler(event) {
+  const highFive = document.querySelector(".high-five"); 
+  event.preventDefault(); 
+  const form = document.querySelector("form"); 
+  if (!form.checkValidity()) {
+    checkEmailInput(); 
+    mountHandlers(); 
+  } else {
+    highFive.textContent = "Form looks perfect! Gimme five ✋"
+  }
+}
+
+export { 
+  mountInputFocusHandler, 
+  submitHandler, 
+};
