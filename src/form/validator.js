@@ -6,10 +6,13 @@ function checkEmailInput() {
 
   emailInput.checkValidity(); 
   if (emailInput.validity.valid) {
+    emailInput.className = ""; 
     emailError.textContent = ""; 
     emailError.className = "email-error"; 
+    return true; 
   } else {
     showEmailError(); 
+    return false; 
   }
 
 }

@@ -24,7 +24,7 @@ input {
   font-size: 90%; 
 }
 
-input:invalid {
+input.invalid {
   border-color: #990000; 
   background-color: #ffdddd;
 }

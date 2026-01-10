@@ -1,5 +1,5 @@
-import { mountHandlers } from "./form/handler";
+import { mountInputFocusHandler } from "./form/handler";
 
 import "./style.css";
 
-mountHandlers();
+mountInputFocusHandler();

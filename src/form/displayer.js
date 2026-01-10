@@ -8,6 +8,7 @@ function showEmailError() {
     emailError.textContent = "Please enter a valid email address. ";
   }
 
+  emailInput.className = "invalid"; 
   emailError.className = "email-error active";
 }
 
