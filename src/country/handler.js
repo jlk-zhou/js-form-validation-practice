@@ -12,6 +12,12 @@ function mountCountryClickAwayHandler() {
 
 function countryClickAwayHandler() {
   checkCountry(); 
+  mountCountryHandler(); 
+}
+
+function mountCountryHandler() {
+  const selectCountry = document.querySelector("select#country");
+  selectCountry.addEventListener("change", checkCountry); 
 }
 
 export { mountCountryFocusHandler };
