@@ -1,6 +1,6 @@
 function showEmailError() {
   const emailInput = document.getElementById("email");
-  const emailError = document.querySelector(".email-error");
+  const emailError = document.querySelector("#email ~ span.error");
 
   if (emailInput.validity.valueMissing) {
     emailError.textContent = "Please enter an email address. ";
@@ -9,7 +9,7 @@ function showEmailError() {
   }
 
   emailInput.className = "invalid"; 
-  emailError.className = "email-error active";
+  emailError.className = "error active";
 }
 
 export { showEmailError };

@@ -2,13 +2,13 @@ import { showEmailError } from "./displayer";
 
 function checkEmailInput() {
   const emailInput = document.getElementById("email"); 
-  const emailError = document.querySelector(".email-error"); 
+  const emailError = document.querySelector("#email ~ span.error"); 
 
   emailInput.checkValidity(); 
   if (emailInput.validity.valid) {
     emailInput.className = ""; 
     emailError.textContent = ""; 
-    emailError.className = "email-error"; 
+    emailError.className = "error"; 
     return true; 
   } else {
     showEmailError(); 
