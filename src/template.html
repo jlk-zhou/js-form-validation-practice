@@ -341,13 +341,20 @@
 
       <div class="field postcode">
         <label for="postcode">Postcode*: </label>
-        <input type="text" id="postcode" name="postcode" required/>
+        <input type="text" id="postcode" name="postcode" required />
         <span class="error"></span>
       </div>
 
       <div class="field password">
         <label for="password">Password*: </label>
-        <input type="password" id="password" name="password" />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+        />
+        <span class="error"></span>
       </div>
 
       <div class="field confirm-password">
