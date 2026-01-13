@@ -5,6 +5,8 @@ import { checkPostcodeInput } from "../postcode/validator";
 import { mountPostcodeInputHandler } from "../postcode/handler";
 import { checkPasswordInput } from "../password/validator";
 import { mountPasswordInputHandler } from "../password/handler";
+import { checkPwdConfirmInput } from "../password-confirm/validator";
+import { mountPwdConfirmInputHandler } from "../password-confirm/handler";
 
 function submitHandler(event) {
   const highFive = document.querySelector(".high-five");
@@ -24,6 +26,11 @@ function submitHandler(event) {
     if (!checkPasswordInput()) {
       mountPasswordInputHandler();
     }
+
+    if (!checkPwdConfirmInput()) {
+      mountPwdConfirmInputHandler(); 
+    }
+    
   } else {
     highFive.textContent = "Form looks perfect! Gimme five ✋";
   }
